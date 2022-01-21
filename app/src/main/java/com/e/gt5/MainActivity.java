@@ -40,9 +40,17 @@ import org.freedesktop.gstreamer.GStreamer;
 import org.freedesktop.gstreamer.tutorials.tutorial_5.GStreamerSurfaceView;
 
 /**Problem 1: No URI handler implemented for "https"  gstreamer
-*maybe can change playbin to souphttpsrc.
- *https://gstreamer.freedesktop.org/documentation/soup/souphttpsrc.html?gi-language=c#souphttpsrc-page
+ *Android Gstreamer not support https URI. Maybe can change playbin to souphttpsrc.
+ *
+ * The probable solution https://gstreamer.freedesktop.org/documentation/soup/souphttpsrc.html?gi-language=c#souphttpsrc-page
+ *
+ *
 **/
+/** Problem 2: Play Video is very lag.
+*
+*
+*
+* */
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback, OnSeekBarChangeListener{
     private native void nativeInit();     // Initialize native code, build pipeline, etc
     private native void nativeFinalize(); // Destroy pipeline and shutdown native code
@@ -111,6 +119,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 //                Intent i = new Intent(getBaseContext(), FileDialog.class);
 //                i.putExtra(FileDialog.START_PATH, last_folder);
 //                startActivityForResult(i, PICK_FILE_CODE);
+                //the sowFiles() is specify local file
                 File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath());
                 showFiles(file);
             }
@@ -119,6 +128,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         bt1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                //specify http video
+                //the issue is not fixed.
                 mediaUri = defaultMediaUri;
                 is_local_media = false;
                 is_playing_desired = false;
