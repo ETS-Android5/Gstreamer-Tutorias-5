@@ -8,7 +8,7 @@ Finally only one problem in this project that "No URI handler implemented for "h
 * Samsung J5
 # Setting
 ## Andorid.mk
-Add GSTREAMER_ROOT_ANDROID path
+Add GSTREAMER_ROOT_ANDROID path  
 '''
 include $(BUILD_SHARED_LIBRARY)
 GSTREAMER_ROOT_ANDROID := $(LOCAL_PATH)/../../../../../glib
@@ -50,5 +50,3 @@ Executing the project after completing the above steps.
 [Gstreamer Totorial-5 Github Example](https://github.com/bipbopbee/gstreamer-android-studio-example5/tree/master/app/src/main/java/org/freedesktop/gstreamer)
 [How to build GStreamer](https://nickcarter9.github.io/2019/04/03/2019/2019_04_03-build_gstreamer/)
 [How to build GStreamer](https://stackoverflow.com/questions/45044210/gstreamer-examples-in-android-studio)
-
-)
