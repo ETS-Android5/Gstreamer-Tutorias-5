@@ -9,33 +9,33 @@ Finally only one problem in this project that "No URI handler implemented for "h
 # Setting
 ## Andorid.mk
 Add GSTREAMER_ROOT_ANDROID path  
-'''
-include $(BUILD_SHARED_LIBRARY)  
-GSTREAMER_ROOT_ANDROID := $(LOCAL_PATH)/../../../../../glib  
-ifndef GSTREAMER_ROOT_ANDROID  
-''''
+```
+include $(BUILD_SHARED_LIBRARY)
+GSTREAMER_ROOT_ANDROID := $(LOCAL_PATH)/../../../../../glib 
+ifndef GSTREAMER_ROOT_ANDROID
+```
 ## Application.mk
 Setting Application.mk below  
-'''  
-APP_ABI :=all  
-APP_STL = c++_shared  
-APP_PLATFORM :=android-21  
-APP_ALLOW_MISSING_DEPS=true  
-'''  
+``` 
+APP_ABI :=all
+APP_STL = c++_shared
+APP_PLATFORM :=android-21
+APP_ALLOW_MISSING_DEPS=true
+```
 ## build.gradle(:app)
 setting ndk version below  
-'''  
+```
 android {
 compileSdk 31
 ndkVersion "21.4.7075529"
 }
-'''  
+```
 
 # Build
 Go to "jni" foldor  
-'''
+```
 $ ndk-build
-'''
+```
 
 Copy all file(app/src/main/libs/*) to jinLibs after "$ ndk-build"  
 
