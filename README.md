@@ -36,14 +36,13 @@ Go to "jni" foldor
 ```
 $ ndk-build
 ```
-
 Copy all file(app/src/main/libs/*) to jinLibs after "$ ndk-build"  
 
-#Run project
+# Run project
 
 Executing the project after completing the above steps.  
 
-#Reference
+# Reference
 [NDK Example](https://iter01.com/37255.html)  
 [NDK Example](https://medium.com/@guanwu/android-%E9%96%8B%E7%99%BC%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-jni-c-c-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A-271b24f2ec7d)  
 [Gstreamer Example](https://gstreamer.freedesktop.org/documentation/tutorials/index.html?gi-language=c)  
